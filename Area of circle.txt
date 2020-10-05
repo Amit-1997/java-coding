@@ -1,0 +1,18 @@
+// Area of a circle
+import java.util.*;
+class Main
+{
+    static double Area_circle(int r)
+    {
+        
+        return 3.14*r*r;
+    }
+    public static void main(String[] args)
+    {
+        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        double result=Area_circle(n);
+        System.out.println(result);
+    }
+}

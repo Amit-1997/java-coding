@@ -1,0 +1,48 @@
+// strong Number
+import java.util.*;
+class Main 
+{
+         public static int factorial(int m)
+        {
+            if(m==0||m==1)
+            return 1;
+            
+            else
+            return m*factorial(m-1);
+            
+        }
+        
+        
+        static boolean isArmstrong(int n)
+        {
+            int number=n;
+            int rem,fact,sum=0;
+            
+            while(number>0)
+            {
+               rem=number%10;
+               
+              fact= factorial(rem);
+               
+               sum=sum+fact;
+               
+               number=number/10;
+            
+            }
+            
+            if(sum==n)
+            return true;
+            
+            return false;
+            
+            
+        }
+         public static void main(String[] args)
+    {
+        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        boolean result=isArmstrong(n);
+        System.out.println(result);
+    }
+}

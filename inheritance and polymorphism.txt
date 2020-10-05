@@ -1,0 +1,64 @@
+// Inheritance and polymorphism 
+
+class Person 
+{
+   protected String name;
+    public void walk()
+    {
+        System.out.println("person can walk");
+    }
+    
+    public void eat()
+    {
+        System.out.println(name+" can eat");
+    }
+}
+
+
+class Teacher extends Person
+{
+    public void walk()
+    {
+        System.out.println(name+"  can walk");  // due polymorphism
+    }
+    
+    public void teach()
+    {
+        System.out.println(name+" can teach");
+    }
+  
+}
+
+
+class Singer extends Person
+{
+    public void walk()
+    {
+        System.out.println(name+"  can walk");   // due polymorphism
+    }
+    public void sing()
+    {
+        System.out.println(name+" can sing");
+    }
+  
+}
+
+
+class Main 
+{
+    public static void main(String[] args)
+    {
+        Teacher obj=new Teacher();
+        obj.name="Mr.anirban";
+        obj.walk();
+        obj.eat();
+        obj.teach();
+        
+        Singer obj1=new Singer();
+        obj1.name="Arijit Singh";
+        obj1.walk();
+        obj1.eat();
+        obj1.sing();
+        
+    }
+}

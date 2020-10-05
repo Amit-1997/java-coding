@@ -1,0 +1,28 @@
+// leap year or not
+import java.util.*;
+class Main
+{
+    static void Leap_year(int year)
+    {
+        if(year%4==0)
+        System.out.println("leap year");
+        
+        else if(year%100==0)
+        System.out.println("leap year");
+        
+        else if(year%400==0)
+        System.out.println("leap year");
+        
+        else
+         System.out.println("not a leap year");
+       
+    }
+    public static void main(String[] args)
+    {
+        
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        Leap_year(n);
+       // System.out.println(result);
+    }
+}

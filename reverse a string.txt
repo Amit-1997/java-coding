@@ -1,0 +1,29 @@
+// reverse String
+
+import java.util.*;
+class Main 
+{
+    static void isPalindrome(String s,int i,int j)
+    {
+        
+        String rev="";
+        for(int k=j;k>=i;k--)
+        {
+            rev=rev+s.charAt(k);
+        }
+        
+        System.out.println(rev);
+      
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        int i=0;
+        int j=str.length()-1;
+        
+        isPalindrome(str,i,j);
+        //System.out.println(result);
+        
+    }
+}

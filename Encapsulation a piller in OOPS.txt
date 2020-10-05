@@ -1,0 +1,37 @@
+// Encapsulation- wrapping of data and fields into a single unit 
+// Encapsulation can be achieve using packages and Access modifiers
+
+class A
+{
+     private int a;
+     
+     int get()
+     {
+         return a;
+     }
+     
+     void set(int a)
+     {
+         if(a>20)  // controllability
+         {
+             this.a=a;
+         }
+         else
+         {
+         System.out.println("you only modify if value is greater tha 20");
+         }
+     }
+    
+}
+
+class Main 
+{
+    public static void main(String[] args)
+    {
+        A obj=new A();
+        obj.set(30);
+        System.out.println(obj.get());
+    }
+}
+
+// obj class is the root class of all the class in java

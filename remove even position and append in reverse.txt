@@ -1,0 +1,46 @@
+// given a linklist remove all even position nodes 
+// and append then in reverse order.
+
+// sample input :                      output :
+// 10                       
+// 1 2 3 4 5 6 7 8 9 10               1 3 5 7 9 10 8 6 4 2 
+
+
+import java.util.*;
+
+ public class Main
+
+ {
+
+     public static void main(String[] args) {
+
+         Scanner scan = new Scanner(System.in);
+
+         int n;
+
+         n= scan.nextInt();
+
+         LinkedList<Integer> ls =  new LinkedList();
+
+         LinkedList<Integer> ls1 =  new LinkedList();
+
+         for (int i=0;i<n;i++)
+
+         {
+
+             if (i%2==0)
+
+             ls.add(scan.nextInt());
+
+             else
+
+             ls1.addFirst(scan.nextInt());
+
+         }
+
+         System.out.print(ls.toString()+ls1.toString());
+
+
+     }
+
+ }

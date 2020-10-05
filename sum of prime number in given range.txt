@@ -1,0 +1,47 @@
+// find prime number in given range
+import java.util.*;
+class Main
+
+{
+    
+    public static boolean isPrime(int num)
+    {
+        if(num==0 || num==1)
+        return false;
+        
+        int count=0;
+        for(int i=1;i<=num;i++)
+        {
+            if(num%i==0)
+            count++;
+        }
+        if(count==2)
+        return true;
+        return false;
+        
+        
+    }
+    
+    
+    
+    static int prime_in_range(int i,int j)
+    {
+        int sum=0;
+        for(int k=i;k<=j;k++)
+        {
+        if(isPrime(k)==true)
+        sum=sum+k;
+        }
+        return sum;
+    }
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        int start=sc.nextInt();
+        int end=sc.nextInt();
+       int result= prime_in_range(start,end);
+        System.out.println(result);
+    }
+}
